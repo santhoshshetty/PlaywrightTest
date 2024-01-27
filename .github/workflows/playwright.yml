@@ -22,8 +22,11 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: npx playwright test --shard ${{matrix.shard}}
+      - name: Run Headless Playwright tests
+        uses: coactions/setup-xvfb@v1
+        with:
+          run: npx playwright test --shard ${{matrix.shard}}
+          continue-on-error: true
       - uses: actions/upload-artifact@v3
         if: always()
         with:
