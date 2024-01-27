@@ -6,7 +6,7 @@ const config: PlaywrightTestConfig = {
   fullyParallel: true,
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
-    headless: true,
+    headless: false,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
   },
@@ -15,6 +15,8 @@ const config: PlaywrightTestConfig = {
     ["dot"],
     ["json", { outputFile: "jsonReports/jsonReport.json" }],
     ["html", { open: "never" }],
+    ["blob"],
+    ["json", { outputFile: "report.json" }],
   ],
 };
 export default config;
