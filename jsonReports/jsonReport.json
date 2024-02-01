@@ -57,15 +57,12 @@
         "testDir": "C:/Users/gouresan/GHPW/PlaywrightTest",
         "testIgnore": [],
         "testMatch": [
-          "tests/sample.test.ts"
+          "tests/login.test.ts"
         ],
         "timeout": 30000
       }
     ],
-    "shard": {
-      "current": 2,
-      "total": 4
-    },
+    "shard": null,
     "updateSnapshots": "missing",
     "version": "1.41.1",
     "workers": 4,
@@ -73,59 +70,50 @@
   },
   "suites": [
     {
-      "title": "tests\\sample.test.ts",
-      "file": "tests/sample.test.ts",
+      "title": "tests\\login.test.ts",
+      "file": "tests/login.test.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Sample Suite",
-          "file": "tests/sample.test.ts",
-          "line": 3,
-          "column": 6,
-          "specs": [
+          "title": "Login test demo",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Sample Test#2",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 972,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-01-27T08:11:41.500Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11830,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-28T19:01:37.068Z",
+                  "attachments": []
                 }
               ],
-              "id": "b8d367d637850a981290-694d566f91256cf049a8",
-              "file": "tests/sample.test.ts",
-              "line": 18,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "ef85df6096d4739f2c52-456802a5df7135291af1",
+          "file": "tests/login.test.ts",
+          "line": 3,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-27T08:11:40.994Z",
-    "duration": 4119.506,
+    "startTime": "2024-01-28T19:01:36.458Z",
+    "duration": 12703.821,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -1,7 +1,17 @@
 import { PlaywrightTestConfig, defineConfig, devices } from "@playwright/test";
+import { config } from "dotenv";
 
-const config: PlaywrightTestConfig = {
-  testMatch: ["tests/sample.test.ts"],
+if (process.env.ENVIRONMENT) {
+  config({
+    path: `.env.${process.env.ENVIRONMENT}`,
+    override: true,
+  });
+} else {
+  config();
+}
+
+const pwConfig: PlaywrightTestConfig = {
+  testMatch: ["tests/login.test.ts"],
   workers: 4,
   fullyParallel: true,
   use: {
@@ -19,4 +29,4 @@ const config: PlaywrightTestConfig = {
     ["json", { outputFile: "report.json" }],
   ],
 };
-export default config;
+export default pwConfig;
