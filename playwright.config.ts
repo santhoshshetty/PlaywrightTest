@@ -11,9 +11,9 @@ if (process.env.ENVIRONMENT) {
 }
 
 const pwConfig: PlaywrightTestConfig = {
-  testMatch: ["tests/login.test.ts"],
+  testMatch: ["tests/sample.test.ts"],
   workers: 4,
-  fullyParallel: true,
+  fullyParallel: false,
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
     headless: false,
